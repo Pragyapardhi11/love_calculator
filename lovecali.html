@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('http://www.futuresobright.com/images/app-content-images/1359015984_love-calculator.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width:100%;
+            height: 100vh;
+        }
+
+        .card{
+            margin: auto;
+            /* padding-top: 50px; */
+            width: 40%;
+            text-align: center;
+            height: 300px;
+            /* margin-top: 50px; */
+        }
+        .form-inline{
+              width: 64%;
+              margin: auto;
+        }
+        .button{
+            width:300px;
+            /* height: 100px; */
+            margin: auto;
+            /* padding-top: 20px; */
+        }
+        .cardhead{
+            background:rgb(225, 60, 60);
+            width: 100%;
+            height:50px;
+            padding-top: 10px;
+            color: white;
+        }
+        header{
+            width:100%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="card ">
+            <div class="cardhead ">LOVE CALCULATOR</div>
+            <br>
+            <div class="cardbody">
+                <form  class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control  text-center"   placeholder="Your Name" id="name">
+                    </div>
+                          <div><span class="pl-4 pr-4 pt-4 pb-4"> + </span></div>
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control  text-center"   placeholder="Love Name" id="lname">
+                    </div>
+                </form>
+
+                <br>
+
+                <div class="button">
+                    <button class=" btn btn-success w-75" onclick="checkloveper()">Click Here</button>
+                </div>
+
+                <br>
+
+
+                <div>
+                    <input type="text" name=""  id="lovevalue"  class="form-control text-center w-25 m-auto" placeholder="Love Percentage" >
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <div class="cardfooter"> God Bless your Relationship!</div>
+
+        </div>
+    </header>
+
+
+    <script>
+        function checkloveper(){
+            var name=document.getElementById('name').value;
+            var lname=document.getElementById('lname').value;
+            if (name==""){
+                alert("Please enter your name.");
+            }else if (name.length <= 3){
+                alert("Minimum lenght is 3!");
+            }else if (!isNaN(name)){
+                alert("Numbers are not allowed!");
+            }
+
+            if (lname==""){
+                alert("Please enter your love name.");
+            }else if (lname.length <= 3){
+                alert("Minimum lenght is 3!");l
+            }else if (!isNaN(lname)){
+                alert("Numbers are not allowed!");
+            }
+            else{
+                var lovedata = Math.random() * 100;
+            lovedata = Math.floor(lovedata);
+            document.getElementById('lovevalue').value=lovedata + "%";
+
+            }
+
+        }
+    </script>
+</body>
+</html>
